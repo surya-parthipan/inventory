@@ -1,0 +1,14 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>Welcome To WAREHOUSE2.0</h1>
+    <p class="lead">powered by Zuper</p>
+    <p>In this Warehouse 2.0 you can able to modify the details of the items in your warehouse or you can able to add new items to the warehouse.Please LOGIN to change the details of your warehouse.If you don't have a account please SIGNUP.</p>
+    {% if session.logged_in == NULL %}
+      <a href="/register" class="btn btn-primary btn-lg">Register</a>
+      <a href="/login" class="btn btn-success btn-lg">Login</a>
+    {% endif %}
+  </div>
+{% endblock %}
